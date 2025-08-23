@@ -158,8 +158,3 @@ async def github_agent_endpoint(
             data={"error": str(e), "request_id": request.request_id}
         )
         return AgentResponse(success=False)
-
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8001)
